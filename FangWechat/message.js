@@ -43,26 +43,29 @@ var Message = React.createClass({
 
                 <View>
                     <Item
-                        title="德玛西亚"
+                        name="德玛西亚"
                         content="人在塔在!"
                         time="15:07"
                         header={require('image!demaxiya')}
                         topBorder
                         paddingBottomBorder
+                        that={this}
                     />
                     <Item
-                        title="啦啦啦啦"
+                        name="啦啦啦啦"
                         content="我陪你吃草"
                         time="14:58"
                         header={require('image!header2')}
                         paddingBottomBorder
+                        that={this}
                     />
                     <Item
-                        title="文件传输助手"
+                        name="文件传输助手"
                         content="[图片]"
                         time="13:42"
                         header={require('image!file-manager')}
                         bottomBorder
+                        that={this}
                     />
                 </View>
             </ScrollView>
