@@ -53,24 +53,14 @@ var fangWechat = React.createClass({
         )
     },
 
-    getIcon: function (icon) {
-        return (
-            <Image
-                style={{height: 40, width:40}}
-                source={icon}
-            />
-        )
-    },
-
     render: function () {
-        var img = require('image!message');
         return (
             <TabBarIOS
                 tintColor="#45b640"
                 barTintColor="#F5F6F8"
             >
                 <TabBarIOS.Item
-                    icon={img}
+                    icon={require('image!message')}
                     selectedIcon={require('image!message_fill')}
                     title="微信"
                     selected={this.state.selectedTab === 'message'}

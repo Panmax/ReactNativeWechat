@@ -3,6 +3,7 @@
  */
 var React = require('react-native');
 var Util = require('../util');
+var Chat = require('./chat');
 
 var {
     StyleSheet,
@@ -14,11 +15,20 @@ var {
     } = React;
 
 var Item = React.createClass({
+    startChat: function (title) {
+        this.props.that.props.navigator.push({
+            title: title,
+            component: Chat,
+            rightButtonIcon: require('image!user-icon')
+        })
+    },
+
     render: function () {
+        var name = this.props.name;
         return (
             <TouchableHighlight
                 underlayColor="#7A7A7A"
-                onPress={() => {alert('aaa')}}
+                onPress={() => this.startChat(name)}
             >
                 <View>
                     {this.props.topBorder? (
@@ -36,7 +46,7 @@ var Item = React.createClass({
                                 <Text
                                     style={styles.text}
                                     numberOfLines={1}
-                                >{this.props.title}</Text>
+                                >{this.props.name}</Text>
                                 <Text
                                     numberOfLines={1}
                                     style={styles.contentText}
