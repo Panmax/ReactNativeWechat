@@ -37,13 +37,13 @@ var fangWechat = React.createClass({
         })
     },
 
-    addNavigator: function (component, title) {
+    addNavigator: function (component, title, rightButtonIcon) {
         return (
             <NavigatorIOS
                 style={{flex:1}}
                 barTintColor="#000"
                 titleTextColor="#fff"
-                rightButtonIcon={require('image!plus')}
+                rightButtonIcon={rightButtonIcon}
                 tintColor="#fff"
                 initialRoute={{
                     component: component,
@@ -76,7 +76,7 @@ var fangWechat = React.createClass({
                     selected={this.state.selectedTab === 'message'}
                     onPress={() => this.selectTab('message')}
                 >
-                    {this.addNavigator(Message, '微信')}
+                    {this.addNavigator(Message, '微信', require('image!plus'))}
                 </TabBarIOS.Item>
                 <TabBarIOS.Item
                     icon={require('image!contact')}
@@ -85,7 +85,7 @@ var fangWechat = React.createClass({
                     selected={this.state.selectedTab === 'contact'}
                     onPress={() => this.selectTab('contact')}
                 >
-                    {this.addNavigator(Contact, '通讯录')}
+                    {this.addNavigator(Contact, '通讯录', require('image!add-user'))}
                 </TabBarIOS.Item>
                 <TabBarIOS.Item
                     icon={require('image!found')}
