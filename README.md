@@ -10,4 +10,4 @@
 
 ![发现](https://github.com/Panmax/ReactNativeWechat/blob/master/screenshot/3.png)
 
-![我](https://github.com/Panmax/ReactNativeWechat/blob/master/screenshot/1.png)
+![我](https://github.com/Panmax/ReactNativeWechat/blob/master/screenshot/4.png)
